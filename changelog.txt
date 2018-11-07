@@ -1,0 +1,7 @@
+0.0
+    info de git
+    repositório criado
+    changelog criada
+
+0.1
+    programa criado

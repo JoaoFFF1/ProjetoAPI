@@ -1,0 +1,10 @@
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\bin\Debug\WsServerStuff.dll
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\bin\Debug\WsServerStuff.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\bin\Debug\WsServerStuff.xml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\obj\Debug\WsServerStuff.vbprojAssemblyReference.cache
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\obj\Debug\WsServerStuff.Resources.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\obj\Debug\WsServerStuff.vbproj.GenerateResource.cache
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\obj\Debug\WsServerStuff.vbproj.CoreCompileInputs.cache
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\obj\Debug\WsServerStuff.dll
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\obj\Debug\WsServerStuff.xml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\obj\Debug\WsServerStuff.pdb

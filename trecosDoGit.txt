@@ -1,0 +1,70 @@
+﻿Git funciona em 3 fases: 
+    working directory (utilizador faz coisas)
+    staging area  (ficheiro aguarda para ser colocado no diretório, pode ser resgatado)
+    git directory (não há nada a fazer, fica na versão)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Comandos basicos: 
+    git config --global user.<name|email> "<nome|mail>"
+
+    git add <ficheiro|*.<extensão>|.> 
+        -> move de working directory para staging area
+    git commit -m "<mensagem do commit>" 
+        -> move tudo de staging area para git directory
+    git commit -a -m "<mensagem>" 
+        -> move tudo da working directory para git directory
+    git diff
+        -> mostra mudansas nos arquivos no working directory  
+    git diff --stagged
+        -> mostra as mudansas nos arquivos na staging area       
+    git log
+        -> histórico de todos os commits 
+            Nota: a chave dos commits é usada para reobeter versões anteriores
+        -> bunitinhu: git log --petty=oneline
+    gitk    
+        -> git log em GUI        
+    git tag -a/-d <tag> [versão] -m "<mensagem>"
+        -> cria uma tag com a mensagem especificada
+        -> -d remove a tag    
+    git tag 
+        -> mostra as tags
+    git show <tag>
+        -> info da tag
+    git checkout <tag/versão>/<branch>
+        -> muda para a versão/tag / branch
+    git branch <branch>
+        -> cria branch
+        -> git branch lista as branches
+    git merge <fonte>
+        -> define a branch atual igual a <fonte>                 
