@@ -69,6 +69,16 @@ InitializeComponent
 Application Entry Point.
 </summary>
 </member>
+<member name="T:ProjetoApi2018.Login">
+<summary>
+Login
+</summary>
+</member>
+<member name="M:ProjetoApi2018.Login.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:ProjetoApi2018.MainWindow">
 <summary>
 MainWindow

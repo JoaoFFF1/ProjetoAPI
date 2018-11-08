@@ -8,10 +8,8 @@
         Title="Login" Height="261" Width="471.5">
     <Grid Margin="22,0,10,6">
         <Label Content="Login" HorizontalAlignment="Left" Margin="24,57,0,0" VerticalAlignment="Top" Width="374"/>
-        <Label Content="User: teste" HorizontalAlignment="Left" Height="26" Margin="166,112,0,0" VerticalAlignment="Top" Width="90"/>
-        <Label Content="Pass: teste" HorizontalAlignment="Left" Height="26" Margin="166,138,0,0" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="User" HorizontalAlignment="Left" Height="22" Margin="24,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="User_Copy" HorizontalAlignment="Left" Height="22" Margin="24,142,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="User" HorizontalAlignment="Left" Height="22" Margin="24,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="Pass" HorizontalAlignment="Left" Margin="23,148,0,0" VerticalAlignment="Top" Width="121" Height="22"/>
 
     </Grid>
 </Window>

@@ -19,3 +19,5 @@ C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Deb
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.exe
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.xml
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\Login.g.vb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\Login.baml

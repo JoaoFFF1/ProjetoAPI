@@ -4,7 +4,7 @@ Imports System.Net.Sockets
 Imports System.Text
 
 Public Class Client
-    Public Shared Function Send(extmsg) As String
+    Public Shared Function Chat(extmsg) As String
         ' Data buffer for incoming data.  
         Dim bytes(1024) As Byte
 
@@ -44,4 +44,11 @@ Public Class Client
 
         Return Encoding.ASCII.GetString(bytes, 0, bytesRec)
     End Function
+
+    Public Sub SendUser(user As String)
+
+
+
+    End Sub
+
 End Class
