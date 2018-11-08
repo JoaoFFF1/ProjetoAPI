@@ -1,7 +1,7 @@
 ﻿Para aqueles que têm preguiça de saber como isto funciona, eis o que têm de fazer:
 
 git init
-git remote add https://github.com/JoaoFFF1/ProjetoApi.git
+git remote add https://github.com/JoaoFFF1/ProjetoApi/tree/testes
 git branch testes
 O código acima só tem de ser usado uma única vez
 
@@ -14,6 +14,7 @@ git checkout master
 git merge testes
 git commit -a -m"mensagem"
 git push -u origin master
+
 Git funciona em 3 fases: working directory (utilizador faz coisas) staging area (ficheiro aguarda para ser colocado no diretório, pode ser resgatado) git directory (não há nada a fazer, fica na versão)
 
 Cada projeto tem o seu repositório, que é como uma pasta com todos os ficheiros Cada repositório tem branches, como realidades alternativas. Branches são usadas para poder mecher no código em desenvolvimento sem danificar o programa estável. Os commits são versões às quais se pode voltar caso dê asneira. Para ajudar a identificar as versões, há tags (como etiquetas) Quando a versão na branch de teste estiver pronta para dar ao cliente, pode-se fazer merge, fazer a branch master (principal) igual à de teste.
