@@ -1,70 +1,62 @@
-﻿Git funciona em 3 fases: 
-    working directory (utilizador faz coisas)
-    staging area  (ficheiro aguarda para ser colocado no diretório, pode ser resgatado)
-    git directory (não há nada a fazer, fica na versão)
+﻿Para aqueles que têm preguiça de saber como isto funciona, eis o que têm de fazer:
 
+git init
+git remote add https://github.com/JoaoFFF1/ProjetoApi.git
+git branch testes
+O código acima só tem de ser usado uma única vez
 
+git pull origin master
+git checkout testes
 
+[trabalhar]
 
+git checkout master
+git merge testes
+git commit -a -m"mensagem"
+git push -u origin master
+Git funciona em 3 fases: working directory (utilizador faz coisas) staging area (ficheiro aguarda para ser colocado no diretório, pode ser resgatado) git directory (não há nada a fazer, fica na versão)
 
+Cada projeto tem o seu repositório, que é como uma pasta com todos os ficheiros Cada repositório tem branches, como realidades alternativas. Branches são usadas para poder mecher no código em desenvolvimento sem danificar o programa estável. Os commits são versões às quais se pode voltar caso dê asneira. Para ajudar a identificar as versões, há tags (como etiquetas) Quando a versão na branch de teste estiver pronta para dar ao cliente, pode-se fazer merge, fazer a branch master (principal) igual à de teste.
 
+Para iniciar e trabalhar o repositório: git config --global user.name "nome" -> define o nome do utilizador git config --global user.email "mail" -> define o emial do utilizador Estes dados são apenas para se saber quem fez o quê no programa
 
+git init -> cria o repositório
+Para trabalar no repositório: git add <ficheiro|*.<extensão>|.> -> move de working directory para staging area git commit -m "mensagem" -> move da stagging area para o git directory git checkout <tag/versão>/ -> muda para a versão/tag / branch Mexer com o GitHub GitHub é um sistema de hospedagem de commits, mantendo-os acessíveis a todos os utilizadores e de um modo que eles facilmente possam mecher no repositório
 
+Para conectar remotamente ao repositório use git remote add origin <link>.git
+Para obeter o repositório usar git pull origin <branch de destino>
+Para atualizar o repositório na web usar git push -u origin <branch de destino>
+=========================================================================================================
 
+Comandos basicos: git config --global user.<name|email> "<nome|mail>"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Comandos basicos: 
-    git config --global user.<name|email> "<nome|mail>"
-
-    git add <ficheiro|*.<extensão>|.> 
-        -> move de working directory para staging area
-    git commit -m "<mensagem do commit>" 
-        -> move tudo de staging area para git directory
-    git commit -a -m "<mensagem>" 
-        -> move tudo da working directory para git directory
-    git diff
-        -> mostra mudansas nos arquivos no working directory  
-    git diff --stagged
-        -> mostra as mudansas nos arquivos na staging area       
-    git log
-        -> histórico de todos os commits 
-            Nota: a chave dos commits é usada para reobeter versões anteriores
-        -> bunitinhu: git log --petty=oneline
-    gitk    
-        -> git log em GUI        
-    git tag -a/-d <tag> [versão] -m "<mensagem>"
-        -> cria uma tag com a mensagem especificada
-        -> -d remove a tag    
-    git tag 
-        -> mostra as tags
-    git show <tag>
-        -> info da tag
-    git checkout <tag/versão>/<branch>
-        -> muda para a versão/tag / branch
-    git branch <branch>
-        -> cria branch
-        -> git branch lista as branches
-    git merge <fonte>
-        -> define a branch atual igual a <fonte>                 
+git add <ficheiro|*.<extensão>|.> 
+    -> move de working directory para staging area
+git commit -m "<mensagem do commit>" 
+    -> move tudo de staging area para git directory
+git commit -a -m "<mensagem>" 
+    -> move tudo da working directory para git directory
+git diff
+    -> mostra mudansas nos arquivos no working directory  
+git diff --stagged
+    -> mostra as mudansas nos arquivos na staging area       
+git log
+    -> histórico de todos os commits 
+        Nota: a chave dos commits é usada para reobeter versões anteriores
+    -> bunitinhu: git log --petty=oneline
+gitk    
+    -> git log em GUI        
+git tag -a/-d <tag> [versão] -m "<mensagem>"
+    -> cria uma tag com a mensagem especificada
+    -> -d remove a tag    
+git tag 
+    -> mostra as tags
+git show <tag>
+    -> info da tag
+git checkout <tag/versão>/<branch>
+    -> muda para a versão/tag / branch
+git branch <branch>
+    -> cria branch
+    -> git branch lista as branches
+git merge <fonte>
+    -> define a branch atual igual a <fonte>     
