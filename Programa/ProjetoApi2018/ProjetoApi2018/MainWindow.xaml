@@ -13,6 +13,7 @@
         <ListBox x:Name="lst1" HorizontalAlignment="Left" Height="199" Margin="115,42,0,0" VerticalAlignment="Top" Width="546" Background="#FF534E4E"/>
         <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="68" Margin="116,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="546" Background="#FF534E4E"/>
         <Button x:Name="btn1" Content="Enviar" HorizontalAlignment="Left" Margin="689,307,0,0" VerticalAlignment="Top" Width="75" Height="68" Click="Button_Click"/>
+        <Button x:Name="btnGotoLogin" Content="GOTOlogin" HorizontalAlignment="Left" Margin="18,60,0,0" VerticalAlignment="Top" Width="74" Height="41"/>
 
     </Grid>
 </Window>
