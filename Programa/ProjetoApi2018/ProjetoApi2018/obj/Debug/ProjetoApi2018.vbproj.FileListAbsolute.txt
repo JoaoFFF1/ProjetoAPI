@@ -1,5 +1,4 @@
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.vbprojAssemblyReference.cache
-C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\MainWindow.g.vb
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\Application.g.vb
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018_MarkupCompile.cache
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018_MarkupCompile.lref
@@ -10,7 +9,6 @@ C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\bin\Deb
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\bin\Debug\WsServerStuff.dll
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\bin\Debug\WsServerStuff.pdb
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\bin\Debug\WsServerStuff.xml
-C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\MainWindow.baml
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.g.resources
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.Resources.resources
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.vbproj.GenerateResource.cache
@@ -19,3 +17,7 @@ C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Deb
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.exe
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.xml
 C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ProjetoApi2018.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ChatWindow.g.vb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\ChatWindow.baml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\TestWindoh.g.vb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\ProjetoApi2018\ProjetoApi2018\obj\Debug\TestWindoh.baml

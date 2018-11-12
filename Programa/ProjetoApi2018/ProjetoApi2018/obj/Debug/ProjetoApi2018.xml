@@ -54,6 +54,16 @@ ProjetoApi2018
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:ProjetoApi2018.TestWindoh">
+<summary>
+TestWindoh
+</summary>
+</member>
+<member name="M:ProjetoApi2018.TestWindoh.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:ProjetoApi2018.Application">
 <summary>
 Application
@@ -69,12 +79,12 @@ InitializeComponent
 Application Entry Point.
 </summary>
 </member>
-<member name="T:ProjetoApi2018.MainWindow">
+<member name="T:ProjetoApi2018.ChatWindow">
 <summary>
-MainWindow
+ChatWindow
 </summary>
 </member>
-<member name="M:ProjetoApi2018.MainWindow.InitializeComponent">
+<member name="M:ProjetoApi2018.ChatWindow.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>
