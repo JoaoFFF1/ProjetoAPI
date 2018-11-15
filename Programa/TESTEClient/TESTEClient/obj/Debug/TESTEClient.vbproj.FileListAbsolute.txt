@@ -1,0 +1,30 @@
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\bin\Debug\TESTEClient.exe.config
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\bin\Debug\TESTEClient.exe
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\bin\Debug\TESTEClient.pdb
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\bin\Debug\TESTEClient.xml
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\bin\Debug\WsServerStuff.dll
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\bin\Debug\WsServerStuff.pdb
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\bin\Debug\WsServerStuff.xml
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.vbprojAssemblyReference.cache
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.Resources.resources
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.vbproj.GenerateResource.cache
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.vbproj.CoreCompileInputs.cache
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.vbproj.CopyComplete
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.exe
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.xml
+C:\Users\joaof\AppData\Local\Temporary Projects\TESTEClient\obj\Debug\TESTEClient.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\bin\Debug\TESTEClient.exe.config
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\bin\Debug\TESTEClient.exe
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\bin\Debug\TESTEClient.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\bin\Debug\TESTEClient.xml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\bin\Debug\WsServerStuff.dll
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\bin\Debug\WsServerStuff.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\bin\Debug\WsServerStuff.xml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.vbprojAssemblyReference.cache
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.Resources.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.vbproj.GenerateResource.cache
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.vbproj.CoreCompileInputs.cache
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.vbproj.CopyComplete
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.exe
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.xml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\obj\Debug\TESTEClient.pdb
