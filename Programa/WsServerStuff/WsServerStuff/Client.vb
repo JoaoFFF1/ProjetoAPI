@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Net
+﻿Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
 
@@ -21,26 +20,32 @@ Public Class Client
         Dim sender As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
 
+        Console.WriteLine("[Chat]: socket criado.")
+
         ' Connect the socket to the remote endpoint.  
         sender.Connect(remoteEP)
 
-        'Console.WriteLine("Socket connectado a {0}",
-        '    sender.RemoteEndPoint.ToString())
+        Console.WriteLine("[Chat]: socket conectado")
 
         ' Encode the data string into a byte array.  
-
         Dim msg As Byte() =
             Encoding.ASCII.GetBytes(extmsg)
 
         ' Send the data through the socket.  
         Dim bytesSent As Integer = sender.Send(msg)
 
+        Console.WriteLine("[Chat]: mensagem enviada")
+
         ' Receive the response from the remote device.  
         Dim bytesRec As Integer = sender.Receive(bytes)
+
+        Console.WriteLine("[Chat]: mensagem recebida")
 
         ' Release the socket.  
         sender.Shutdown(SocketShutdown.Both)
         sender.Close()
+
+        Console.WriteLine("[Chat]: socket morto")
 
         Return Encoding.ASCII.GetString(bytes, 0, bytesRec)
     End Function
@@ -49,7 +54,7 @@ Public Class Client
 
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
-        Dim remoteEP As New IPEndPoint(ipAddress, 11001)
+        Dim remoteEP As New IPEndPoint(ipAddress, 60000)
 
         Dim sender As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
