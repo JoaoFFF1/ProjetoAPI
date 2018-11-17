@@ -50,7 +50,7 @@ Public Class Client
         Return Encoding.ASCII.GetString(bytes, 0, bytesRec)
     End Function
 
-    Public Sub SendKey(key As String)
+    Public Shared Sub SendKey(key As String)
 
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
@@ -77,33 +77,55 @@ Public Class Client
 
     End Sub
 
-    Public Sub ClientRegister(credential As String)
+    Public Shared Sub ClientRegister(nome As String, pass As String)
 
         Dim bytes(1024) As Byte
 
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
-        Dim remoteEP As New IPEndPoint(ipAddress, 11000)
+        Dim remoteEP As New IPEndPoint(ipAddress, 11002)
+        Dim localEndPoint As New IPEndPoint(ipAddress, 11001)
 
         Dim register As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
 
-        Console.WriteLine("[ClientRegister]: socket criado")
+        Console.WriteLine("[ClientRegister]: socket1 criado")
 
         register.Connect(remoteEP)
 
-        Console.WriteLine("[ClientRegister]: socket conectado")
+        Console.WriteLine("[ClientRegister]: socket1 conectado")
 
-        Dim credSent As Integer = register.Send(Encoding.ASCII.GetBytes(credential))
+        Dim nameSent As Integer = register.Send(Encoding.ASCII.GetBytes(nome))
 
-        Console.WriteLine("[ClientRegister]: dados enviados")
+        Console.WriteLine("[ClientRegister]: nome enviado")
 
         register.Shutdown(SocketShutdown.Both)
         register.Close()
 
+        Console.WriteLine("[ClientRegister]: socket1 ceifado")
+
+        Dim listener As New Socket(ipAddress.AddressFamily,
+            SocketType.Stream, ProtocolType.Tcp)
+
+        Console.WriteLine("[ClientRegister]: socket listener criado.")
+
+        listener.Bind(localEndPoint)
+        listener.Listen(10)
+
+        Console.WriteLine("[ClientRegister]: Aguardando conexões.")
+
+        If Server.Income() = "ready" Then
+            Dim passSent As Integer = register.Send(Encoding.ASCII.GetBytes(pass))
+        End If
+
+        register.Shutdown(SocketShutdown.Both)
+        register.Close()
+
+        Console.WriteLine("[ClientRegister]: Socket listener assassinado.")
+
     End Sub
 
-    Public Sub ClientLogin(credential As String)
+    Public Shared Sub ClientLogin(credential As String)
         Dim bytes(1024) As Byte
 
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())

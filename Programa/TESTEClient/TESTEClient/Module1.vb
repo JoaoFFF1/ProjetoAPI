@@ -4,8 +4,6 @@ Module Module1
 
     Dim client As New Client
     Dim server As New Server
-    Dim nome As String
-    Dim pass As String
     Dim users As New Dictionary(Of String, User)
     Dim names() As String
 
@@ -27,44 +25,25 @@ Module Module1
                     client.SendKey("chat")
                     While True
 
-                        'client.SendKey("chat")
                         Client.Chat(Console.ReadLine())
                     End While
                     Exit While
                 Case "2"
 
-                    'client.SendKey("register")
                     'Console.Write("User: ")
-                    'client.ClientRegister(Console.ReadLine())
-                    'If server.Income() = "ready" Then
-                    '    Console.Write("Pass: ")
-                    '    client.ClientRegister(Console.ReadLine())
-                    'End If
-                    'Exit While
-
-                    Console.Write("User: ")
-                    nome = Console.ReadLine()
-                    Console.Write("Pass: ")
-                    pass = Console.ReadLine()
+                    'nome = Console.ReadLine()
+                    'Console.Write("Pass: ")
+                    'pass = Console.ReadLine()
 
                 Case "3"
-                    While True
-                        Console.Write("User: ")
-                        nome = Console.ReadLine()
-                        Console.Write("Pass: ")
-                        pass = Console.ReadLine()
-                        Console.Write("Repita a Pass: ")
+                    Client.SendKey("register")
 
-                        If pass = Console.ReadLine() Then
-                            Dim user As New User With {.name = nome, .password = pass}
-                            users.Add(user.name, user)
-                            names(0) = user.name
-                            For Each item As String In names
-                                Console.Write(item + ", ")
-                            Next
-                        End If
-                        Console.WriteLine(users)
-                    End While
+                    Console.Write("Nome: ")
+                    Dim nome As String = Console.ReadLine()
+                    Console.Write("Pass: ")
+                    Dim pass As String = Console.ReadLine()
+
+                    Client.ClientRegister(nome, pass)
             End Select
         End While
 

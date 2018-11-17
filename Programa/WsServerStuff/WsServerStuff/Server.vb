@@ -65,7 +65,7 @@ Public Class Server
 
     End Sub
 
-    Public Function Income() As String
+    Public Shared Function Income() As String
 
         Dim bytes() As Byte = New [Byte](1024) {}
 
@@ -102,7 +102,7 @@ Public Class Server
         Return data
     End Function
 
-    Public Function InRegister() As String
+    Public Shared Function InRegister(name As String, pass As String) As String
 
         Dim bytes() As Byte = New [Byte](1024) {}
 
@@ -113,12 +113,14 @@ Public Class Server
         Dim listener As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
 
-        Console.WriteLine("[InRegister]: socket criado.")
+        Console.WriteLine("[InRegister]: socket1 criado.")
 
         listener.Bind(localEndPoint)
         listener.Listen(10)
 
         Console.WriteLine("[InRegister]: Aguardando conexões.")
+
+        '===========================================================
 
         Dim handler As Socket = listener.Accept()
         data = Nothing
@@ -128,13 +130,47 @@ Public Class Server
         While True
             Dim bytesRec As Integer = handler.Receive(bytes)
             data += Encoding.ASCII.GetString(bytes, 0, bytesRec)
+            Console.WriteLine("[InRegister]: a receber nome...[{0}]", data)
+
             Exit While
         End While
+        name = data
 
+        Console.WriteLine("[InRegister] nome recebido : {0}", data)
+
+        'handler.Send(Encoding.ASCII.GetBytes("ready"))
         handler.Shutdown(SocketShutdown.Both)
         handler.Close()
 
-        Console.WriteLine("[InRegister]: dados.")
+        Console.WriteLine("[InRegister] socket1 exterminado")
+
+        Client.SendKey("ready")
+
+        Console.WriteLine("[InRegister] preparado para receber a pass")
+        '===========================================================
+
+        Dim handler2 As Socket = listener.Accept()
+        data = Nothing
+
+        Console.WriteLine("[InRegister]: ligação estabelecida.")
+
+        While True
+            Dim bytesRec As Integer = handler2.Receive(bytes)
+            data += Encoding.ASCII.GetString(bytes, 0, bytesRec)
+            Console.WriteLine("[InRegister]: a receber pass...[{0}]", data)
+
+            Exit While
+        End While
+        pass = data
+
+        Console.WriteLine("[InRegister] pass recebida : {0}", data)
+
+        '===========================================================
+
+        handler2.Shutdown(SocketShutdown.Both)
+        handler2.Close()
+
+        Console.WriteLine("[InRegister] socket2 fuzilado")
 
         Return data
     End Function

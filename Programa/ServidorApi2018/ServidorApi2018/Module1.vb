@@ -4,11 +4,9 @@ Module Module1
 
     Sub Main()
 
-        Dim server As New Server
-        Dim client As New Client
-        Dim name As String
-        Dim pass As String
         Dim users As New Dictionary(Of String, User)
+        Dim name As String = ""
+        Dim pass As String = ""
 
         While True
 
@@ -19,9 +17,9 @@ Module Module1
                     Exit While
                     'Exit Select
                 Case "register"
-                    name = server.Income()
-                    client.SendKey("ready")
-                    pass = server.Income()
+
+                    Server.InRegister(name, pass)
+
                     Console.WriteLine(name & " " & pass)
 
                     Exit While
