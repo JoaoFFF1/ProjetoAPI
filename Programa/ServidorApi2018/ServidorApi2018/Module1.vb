@@ -9,22 +9,30 @@ Module Module1
         Dim pass As String = ""
 
         While True
+            Console.WriteLine("Entrou no while")
 
-            Select Case server.Income()
+            Select Case Server.Income()
+
                 Case "chat"
+                    Console.WriteLine("key recebida: chat")
+
                     Server.ChatServer()
+                    Console.WriteLine("{ChatServer}: concluido, saindo do select case")
 
                     Exit While
-                    'Exit Select
                 Case "register"
+                    Console.WriteLine("key recebida: register")
 
                     Server.InRegister(name, pass)
+                    Console.WriteLine("{InRegister}: concluido")
 
                     Console.WriteLine(name & " " & pass)
+                    Console.WriteLine("saindo do select case")
 
                     Exit While
-                    'Exit Select
             End Select
+            Console.WriteLine("saindo do while")
+
             Exit While
 
         End While

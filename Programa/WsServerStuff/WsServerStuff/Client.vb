@@ -83,8 +83,8 @@ Public Class Client
 
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
-        Dim remoteEP As New IPEndPoint(ipAddress, 11002)
-        Dim localEndPoint As New IPEndPoint(ipAddress, 11001)
+        Dim remoteEP As New IPEndPoint(ipAddress, 11001)
+        Dim localEndPoint As New IPEndPoint(ipAddress, 11002)
 
         Dim register As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)

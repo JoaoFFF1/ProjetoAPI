@@ -22,10 +22,12 @@ Module Module1
             Select Case resultado
                 Case "1"
 
-                    client.SendKey("chat")
+                    Client.SendKey("chat")
+                    Console.WriteLine("key enviada, chat")
                     While True
 
                         Client.Chat(Console.ReadLine())
+                        Console.WriteLine("{Chat}: fim de método")
                     End While
                     Exit While
                 Case "2"
@@ -37,6 +39,8 @@ Module Module1
 
                 Case "3"
                     Client.SendKey("register")
+                    Console.WriteLine("key enviada, register")
+
 
                     Console.Write("Nome: ")
                     Dim nome As String = Console.ReadLine()
@@ -44,6 +48,7 @@ Module Module1
                     Dim pass As String = Console.ReadLine()
 
                     Client.ClientRegister(nome, pass)
+                    Console.WriteLine("{ClientRegister}: fim de método")
             End Select
         End While
 

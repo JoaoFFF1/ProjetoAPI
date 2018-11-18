@@ -174,4 +174,41 @@ Public Class Server
 
         Return data
     End Function
+    '===============================================================================
+    '===============================================================================
+    'Public Shared Function Chat(extmsg) As String
+    '    Dim bytes(1024) As Byte
+
+    '    Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
+    '    Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
+    '    Dim remoteEP As New IPEndPoint(ipAddress, 11000)
+
+    '    Dim sender As New Socket(ipAddress.AddressFamily,
+    '        SocketType.Stream, ProtocolType.Tcp)
+
+    '    Console.WriteLine("[Chat]: socket criado.")
+
+    '    sender.Connect(remoteEP)
+
+    '    Console.WriteLine("[Chat]: socket conectado")
+
+    '    Dim msg As Byte() =
+    '        Encoding.ASCII.GetBytes(extmsg)
+
+    '    Dim bytesSent As Integer = sender.Send(msg)
+
+    '    Console.WriteLine("[Chat]: mensagem enviada")
+
+    '    Dim bytesRec As Integer = sender.Receive(bytes)
+
+    '    Console.WriteLine("[Chat]: mensagem recebida")
+
+    '    sender.Shutdown(SocketShutdown.Both)
+    '    sender.Close()
+
+    '    Console.WriteLine("[Chat]: socket morto")
+
+    '    Return Encoding.ASCII.GetString(bytes, 0, bytesRec)
+    'End Function
+
 End Class
