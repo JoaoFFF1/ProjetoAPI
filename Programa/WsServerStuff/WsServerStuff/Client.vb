@@ -85,14 +85,15 @@ Public Class Client
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
         Dim remoteEP As New IPEndPoint(ipAddress, 11000)
-        'Dim localEndPoint As New IPEndPoint(ipAddress, 11002)
+        Dim localEndPoint As New IPEndPoint(ipAddress, 11000)
 
         Dim register As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
 
         Console.WriteLine("[ClientRegister]: socket criado.")
 
-        register.Connect(remoteEP)
+        'register.Connect(remoteEP)
+        register.Bind(localEndPoint)
 
         Console.WriteLine("[ClientRegister]: socket conectado.")
 
@@ -111,7 +112,7 @@ Public Class Client
         'Console.WriteLine("[ClientRegister]: socket listener criado.")
 
         'listener.Bind(localEndPoint)
-        'listener.Listen(10)
+        register.Listen(10)
 
         Dim handler As Socket = register.Accept()
         data = Nothing
