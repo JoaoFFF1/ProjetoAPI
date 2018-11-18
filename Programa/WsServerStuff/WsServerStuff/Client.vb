@@ -3,6 +3,7 @@ Imports System.Net.Sockets
 Imports System.Text
 
 Public Class Client
+    Public Shared data As String = Nothing
 
     Public Shared Function Chat(extmsg) As String
         ' Data buffer for incoming data.  
@@ -25,7 +26,7 @@ Public Class Client
         ' Connect the socket to the remote endpoint.  
         sender.Connect(remoteEP)
 
-        Console.WriteLine("[Chat]: socket conectado")
+        Console.WriteLine("[Chat]: socket conectado.")
 
         ' Encode the data string into a byte array.  
         Dim msg As Byte() =
@@ -34,18 +35,18 @@ Public Class Client
         ' Send the data through the socket.  
         Dim bytesSent As Integer = sender.Send(msg)
 
-        Console.WriteLine("[Chat]: mensagem enviada")
+        Console.WriteLine("[Chat]: mensagem enviada.")
 
         ' Receive the response from the remote device.  
         Dim bytesRec As Integer = sender.Receive(bytes)
 
-        Console.WriteLine("[Chat]: mensagem recebida")
+        Console.WriteLine("[Chat]: mensagem recebida.")
 
         ' Release the socket.  
         sender.Shutdown(SocketShutdown.Both)
         sender.Close()
 
-        Console.WriteLine("[Chat]: socket morto")
+        Console.WriteLine("[Chat]: socket morto.")
 
         Return Encoding.ASCII.GetString(bytes, 0, bytesRec)
     End Function
@@ -73,7 +74,7 @@ Public Class Client
         sender.Shutdown(SocketShutdown.Both)
         sender.Close()
 
-        Console.WriteLine("[SendKey]: key enviada")
+        Console.WriteLine("[SendKey]: key enviada.")
 
     End Sub
 
@@ -83,45 +84,51 @@ Public Class Client
 
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
-        Dim remoteEP As New IPEndPoint(ipAddress, 11001)
-        Dim localEndPoint As New IPEndPoint(ipAddress, 11002)
+        Dim remoteEP As New IPEndPoint(ipAddress, 11000)
+        'Dim localEndPoint As New IPEndPoint(ipAddress, 11002)
 
         Dim register As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
 
-        Console.WriteLine("[ClientRegister]: socket1 criado")
+        Console.WriteLine("[ClientRegister]: socket criado.")
 
         register.Connect(remoteEP)
 
-        Console.WriteLine("[ClientRegister]: socket1 conectado")
+        Console.WriteLine("[ClientRegister]: socket conectado.")
 
         Dim nameSent As Integer = register.Send(Encoding.ASCII.GetBytes(nome))
 
-        Console.WriteLine("[ClientRegister]: nome enviado")
+        Console.WriteLine("[ClientRegister]: nome enviado.")
 
-        register.Shutdown(SocketShutdown.Both)
-        register.Close()
+        'register.Shutdown(SocketShutdown.Both)
+        'register.Close()
 
-        Console.WriteLine("[ClientRegister]: socket1 ceifado")
+        'Console.WriteLine("[ClientRegister]: socket ceifado")
 
-        Dim listener As New Socket(ipAddress.AddressFamily,
-            SocketType.Stream, ProtocolType.Tcp)
+        'Dim listener As New Socket(ipAddress.AddressFamily,
+        '    SocketType.Stream, ProtocolType.Tcp)
 
-        Console.WriteLine("[ClientRegister]: socket listener criado.")
+        'Console.WriteLine("[ClientRegister]: socket listener criado.")
 
-        listener.Bind(localEndPoint)
-        listener.Listen(10)
+        'listener.Bind(localEndPoint)
+        'listener.Listen(10)
 
-        Console.WriteLine("[ClientRegister]: Aguardando conexões.")
+        Dim handler As Socket = register.Accept()
+        data = Nothing
+
+        Console.WriteLine("[ClientRegister]: Aguardando aprovação da pass.")
 
         If Server.Income() = "ready" Then
+            Console.WriteLine("[ClientRegister]: Aprovação recebida.")
             Dim passSent As Integer = register.Send(Encoding.ASCII.GetBytes(pass))
         End If
 
         register.Shutdown(SocketShutdown.Both)
         register.Close()
+        handler.Shutdown(SocketShutdown.Both)
+        handler.Close()
 
-        Console.WriteLine("[ClientRegister]: Socket listener assassinado.")
+        Console.WriteLine("[ClientRegister]: Sockets assassinados.")
 
     End Sub
 
@@ -135,15 +142,15 @@ Public Class Client
         Dim register As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
 
-        Console.WriteLine("[ClientRegister]: socket criado")
+        Console.WriteLine("[ClientLogin]: socket criado.")
 
         register.Connect(remoteEP)
 
-        Console.WriteLine("[ClientRegister]: socket conectado")
+        Console.WriteLine("[ClientLogin]: socket conectado.")
 
         Dim credSent As Integer = register.Send(Encoding.ASCII.GetBytes(credential))
 
-        Console.WriteLine("[ClientRegister]: dados enviados")
+        Console.WriteLine("[ClientLogin]: dados enviados.")
 
         register.Shutdown(SocketShutdown.Both)
         register.Close()
