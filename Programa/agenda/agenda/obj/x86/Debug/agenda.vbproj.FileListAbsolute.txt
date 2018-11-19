@@ -14,3 +14,17 @@ C:\Users\Utilizador\Documents\Visual Studio 2010\Projects\agenda\agenda\obj\x86\
 D:\agenda API\agenda\agenda\obj\x86\Debug\agenda.exe
 D:\agenda API\agenda\agenda\obj\x86\Debug\agenda.xml
 D:\agenda API\agenda\agenda\obj\x86\Debug\agenda.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\agenda.exe
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\agenda.xml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\agenda.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\bin\Debug\agenda.exe
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\bin\Debug\agenda.pdb
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\bin\Debug\agenda.xml
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form2.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form3.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form4.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form5.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\agenda.vbproj.GenerateResource.Cache
+C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\bin\Debug\agenda.exe.config

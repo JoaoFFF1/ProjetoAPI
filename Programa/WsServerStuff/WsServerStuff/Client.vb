@@ -92,8 +92,8 @@ Public Class Client
 
         Console.WriteLine("[ClientRegister]: socket criado.")
 
-        'register.Connect(remoteEP)
-        register.Bind(localEndPoint)
+        register.Connect(remoteEP)
+        'register.Bind(localEndPoint)
 
         Console.WriteLine("[ClientRegister]: socket conectado.")
 

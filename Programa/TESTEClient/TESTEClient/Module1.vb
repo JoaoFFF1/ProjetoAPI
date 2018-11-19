@@ -102,3 +102,12 @@ Module Module1
     'End Function
 
 End Module
+'System.Net.Sockets.SocketException
+'HResult = 0x80004005
+'  Message = Um pedido para enviar ou receber dados não foi permitido porque o socket não está ligado e (durante o envio num socket de datagrama utilizando uma chamada sendto) não foi fornecido um endereço
+'  Source = System
+'StackTrace:
+'   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+'   at System.Net.Sockets.Socket.Send(Byte[] buffer)
+'   at WsServerStuff.Client.ClientRegister(String nome, String pass) In C:\Users\joaof\Desktop\ProjetoApi\Programa\WsServerStuff\WsServerStuff\Client.vb:line 100
+'   at TESTEClient.Module1.main() In C:\Users\joaof\Desktop\ProjetoApi\Programa\TESTEClient\TESTEClient\Module1.vb:line 50

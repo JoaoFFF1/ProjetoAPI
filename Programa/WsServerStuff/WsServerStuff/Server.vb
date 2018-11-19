@@ -108,7 +108,7 @@ Public Class Server
 
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)
-        Dim localEndPoint As New IPEndPoint(ipAddress, 11000)
+        Dim localEndPoint As New IPEndPoint(ipAddress, 11001)
 
         Dim listener As New Socket(ipAddress.AddressFamily,
             SocketType.Stream, ProtocolType.Tcp)
