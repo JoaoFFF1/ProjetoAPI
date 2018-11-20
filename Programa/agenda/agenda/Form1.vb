@@ -1,5 +1,10 @@
 ﻿Public Class Form1
 
+    Dim nUsers As Byte = 0
+    Const maxUsers As Byte = 10
+    Dim names(9) As String
+    Dim passes(9) As String
+
     Private Sub PictureBox2_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox2.Click
         Application.Exit()
 
@@ -34,13 +39,11 @@
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         If Button2.Text = "Registo" Then
             If TextBox2.Text = TextBox3.Text Then
-                'Dim nUsers As Integer = 0
-                'nUsers = nUsers + 1
-                'Dim user As New User With {.nome = TextBox1.Text, .pass = TextBox2.Text}
-                'Dim users(nUsers) As String
-                'users(nUsers - 1) = TextBox1.Text
-                'Form3.Show()
-
+                If nUsers + 1 <= maxUsers Then
+                    nUsers = nUsers + 1
+                    names(nUsers - 1) = TextBox1.Text
+                    passes(nUsers - 1) = TextBox2.Text
+                End If
             End If
         End If
     End Sub

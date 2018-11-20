@@ -1,7 +1,7 @@
 ﻿Para aqueles que têm preguiça de saber como isto funciona, eis o que têm de fazer:
 
 git init
-git remote add https://github.com/JoaoFFF1/ProjetoApi/tree/testes
+git remote add <link do repositório remoto>
 git branch testes
 O código acima só tem de ser usado uma única vez
 
@@ -29,8 +29,10 @@ Para obeter o repositório usar git pull origin <branch de destino>
 Para atualizar o repositório na web usar git push -u origin <branch de destino>
 =========================================================================================================
 
-Comandos basicos: git config --global user.<name|email> "<nome|mail>"
+Comandos basicos: 
 
+git config --global user.<name|email> "<nome|mail>"
+    -> registo das informações pessoais
 git add <ficheiro|*.<extensão>|.> 
     -> move de working directory para staging area
 git commit -m "<mensagem do commit>" 
@@ -61,3 +63,5 @@ git branch <branch>
     -> git branch lista as branches
 git merge <fonte>
     -> define a branch atual igual a <fonte>     
+git rebase
+    -> não 
