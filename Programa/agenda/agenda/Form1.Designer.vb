@@ -32,25 +32,26 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(580, 271)
+        Me.TextBox1.Location = New System.Drawing.Point(616, 271)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(152, 20)
         Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "user"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(580, 327)
+        Me.TextBox2.Location = New System.Drawing.Point(616, 327)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(152, 20)
         Me.TextBox2.TabIndex = 2
-        Me.TextBox2.Text = "password"
         '
         'Label1
         '
@@ -103,11 +104,10 @@ Partial Class Form1
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(580, 387)
+        Me.TextBox3.Location = New System.Drawing.Point(616, 387)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(152, 20)
         Me.TextBox3.TabIndex = 10
-        Me.TextBox3.Text = "repeat password"
         Me.TextBox3.Visible = False
         '
         'CheckBox1
@@ -129,12 +129,43 @@ Partial Class Form1
         Me.Button2.Text = "Login"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(566, 271)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(29, 13)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "User"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(566, 327)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(30, 13)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Pass"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(537, 387)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(73, 13)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Repeate pass"
+        Me.Label5.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(804, 552)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.TextBox3)
@@ -165,5 +196,8 @@ Partial Class Form1
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

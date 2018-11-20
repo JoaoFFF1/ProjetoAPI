@@ -89,7 +89,7 @@ Partial Class Form3
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(316, 475)
         Me.RichTextBox1.TabIndex = 9
-        Me.RichTextBox1.Text = "planning"
+        Me.RichTextBox1.Text = ""
         '
         'Button1
         '
@@ -150,7 +150,7 @@ Partial Class Form3
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(351, 293)
         Me.RichTextBox2.TabIndex = 15
-        Me.RichTextBox2.Text = "to do list"
+        Me.RichTextBox2.Text = ""
         '
         'Form3
         '
