@@ -1,16 +1,9 @@
 ﻿Public Class Form3
 
-    Dim listaDiarios As List(Of Diario)
-
-    Private Sub MonthCalendar1_DateChanged(sender As System.Object, e As System.Windows.Forms.DateRangeEventArgs) Handles MonthCalendar1.DateChanged
-        'Lê a data selecionada no calendário
-        'Se a data tiver dados associados
-        'Então define o texto da RichTextBox1 como o texto associado à data 
-        'Se não cria um novo diário com a data igual à data selecionada
-        'Tá confuso, eu sei, então lê https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.monthcalendar?view=netframework-4.7.2
-
-        'Dim data1 As Date = MonthCalendar1.SelectDate
-    End Sub
+    Dim dados As Integer = 0
+    Dim datas(365) As Date
+    Dim notas(365) As String
+    Dim notas2(365) As String
 
     Private Sub Form3_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
        
@@ -94,5 +87,30 @@
 
     Private Sub RichTextBox2_MouseClick(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles RichTextBox2.MouseClick
         RichTextBox2.Clear()
+    End Sub
+
+    Private Sub DateTimePicker1_ValueChanged(sender As System.Object, e As System.EventArgs) Handles DateTimePicker1.ValueChanged
+        'Dim a As Date = DateTimePicker1.Value
+
+        'data muda
+        'mostra nas textboxes os dados do dia
+
+        If Not (RichTextBox1.TextLength = 0 Or RichTextBox2.TextLength = 0) Then
+
+            datas(dados) = DateTimePicker1.Value
+            notas(dados) = RichTextBox1.Text
+            notas2(dados) = RichTextBox2.Text
+
+            Try
+                RichTextBox1.Text = notas(Array.IndexOf(datas, DateTimePicker1.Value))
+                RichTextBox2.Text = notas2(Array.IndexOf(datas, DateTimePicker1.Value))
+            Catch ex As IndexOutOfRangeException
+                RichTextBox1.Text = ""
+                RichTextBox2.Text = ""
+            End Try
+
+            RichTextBox1.Clear()
+            RichTextBox2.Clear()
+        End If
     End Sub
 End Class
