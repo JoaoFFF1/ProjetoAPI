@@ -94,23 +94,22 @@
 
         'data muda
         'mostra nas textboxes os dados do dia
+        '======================================
+        'Dim dados As Integer = 0
+        'Dim datas(365) As Date
+        'Dim notas(365) As String
+        'Dim notas2(365) As String
 
         If Not (RichTextBox1.TextLength = 0 Or RichTextBox2.TextLength = 0) Then
-
             datas(dados) = DateTimePicker1.Value
             notas(dados) = RichTextBox1.Text
             notas2(dados) = RichTextBox2.Text
 
-            Try
-                RichTextBox1.Text = notas(Array.IndexOf(datas, DateTimePicker1.Value))
-                RichTextBox2.Text = notas2(Array.IndexOf(datas, DateTimePicker1.Value))
-            Catch ex As IndexOutOfRangeException
-                RichTextBox1.Text = ""
-                RichTextBox2.Text = ""
-            End Try
-
             RichTextBox1.Clear()
             RichTextBox2.Clear()
+
+            RichTextBox1.Text = notas(Array.IndexOf(datas, DateTimePicker1.Value))
+            RichTextBox2.Text = notas2(Array.IndexOf(datas, DateTimePicker1.Value))
         End If
     End Sub
 End Class

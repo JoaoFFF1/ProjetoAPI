@@ -33,6 +33,7 @@ Partial Class Form3
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -150,6 +151,14 @@ Partial Class Form3
         Me.DateTimePicker1.Size = New System.Drawing.Size(225, 20)
         Me.DateTimePicker1.TabIndex = 16
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(266, 13)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
+        Me.Label3.TabIndex = 17
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -157,6 +166,7 @@ Partial Class Form3
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.inverno
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(804, 552)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.RichTextBox2)
         Me.Controls.Add(Me.PictureBox5)
@@ -178,6 +188,7 @@ Partial Class Form3
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -191,4 +202,5 @@ Partial Class Form3
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

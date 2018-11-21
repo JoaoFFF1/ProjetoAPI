@@ -1,5 +1,6 @@
 ﻿Public Class Form1
 
+    Dim passa As Boolean
     Dim nusers As Byte = 0
     Dim users(10) As String
     Dim passes(10) As String
@@ -34,19 +35,35 @@
                 MessageBox.Show("Erro: preencha todos os campos.")
             Else
                 If TextBox2.Text = TextBox3.Text Then
-                    users(nusers) = TextBox1.Text
-                    passes(nusers) = TextBox2.Text
 
-                    nusers = nusers + 1
+                    If Not (Array.IndexOf(users, TextBox1.Text) > -1) Then
+                        users(nusers) = TextBox1.Text
+                        passes(nusers) = TextBox2.Text
 
-                    Me.Hide()
-                    Form3.Show()
+                        nusers = nusers + 1
+
+                        Me.Hide()
+                        Form3.Show()
+                    Else
+                        'login
+                    End If
+
                 Else
                     MessageBox.Show("Erro: passes não coincídem.")
                 End If
             End If
-        Else
+        Else ' Login
+            If TextBox1.TextLength = 0 Or TextBox2.TextLength = 0 Then
+                MessageBox.Show("Erro: preencha todos os campos.")
+            Else
+                If Array.IndexOf(users, TextBox1.Text) > -1 Then
 
+                    Me.Hide()
+                    Form3.Show()
+                Else
+                    MessageBox.Show("Erro: utilizador não encontrado, por favor faça o registo.")
+                End If
+            End If
         End If
 
     End Sub
@@ -54,6 +71,26 @@
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Label2.Text = Date.Now.Year
     End Sub
+
+    '    Public Function validar(array As String(), value As String) As Boolean
+    '        For Each item As String In array
+    '            If item = value Then
+    '                passa = True
+    '                Exit For
+    '            Else
+    '                passa = False
+    '            End If
+    '            Return passa
+    '        Next
+    '    End Function
+
+    '    Public Function login(nome As String, pass As String) As Boolean
+    '        If validar(users, nome) Then
+    '            passa = True
+    '        Else
+    '            passa = False
+    '        End If
+    '    End Function
 End Class
 'my.computer.filesystem 
 '   writtealltext(dir, ficheiro, boool)
