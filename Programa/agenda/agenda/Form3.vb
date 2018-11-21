@@ -94,6 +94,10 @@
 
         'data muda
         'mostra nas textboxes os dados do dia
+
+        'Tentar passar isto a botão, salva os dados carregando num botão que salva a data 
+        'e ao mudar de data ele muda de texto
+
         '======================================
         'Dim dados As Integer = 0
         'Dim datas(365) As Date
@@ -101,15 +105,23 @@
         'Dim notas2(365) As String
 
         If Not (RichTextBox1.TextLength = 0 Or RichTextBox2.TextLength = 0) Then
+            RichTextBox3.AppendText("<=====================>" & vbNewLine & "Evento detetado, DateTimePicker1.Value: " & DateTimePicker1.Value)
+
             datas(dados) = DateTimePicker1.Value
             notas(dados) = RichTextBox1.Text
             notas2(dados) = RichTextBox2.Text
 
+            RichTextBox3.AppendText("index: " & dados & vbNewLine & " data adicionada: " & datas(dados) & " nota1 adicionada: " & notas(dados) & vbNewLine & " nota2 adicionada: " & notas2(dados))
+
             RichTextBox1.Clear()
             RichTextBox2.Clear()
 
+            RichTextBox3.AppendText("Caixas limpas")
+
             RichTextBox1.Text = notas(Array.IndexOf(datas, DateTimePicker1.Value))
             RichTextBox2.Text = notas2(Array.IndexOf(datas, DateTimePicker1.Value))
+
+            RichTextBox3.AppendText("Texto definido" & vbNewLine & "<=====================>")
         End If
     End Sub
 End Class
