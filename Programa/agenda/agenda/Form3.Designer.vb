@@ -35,6 +35,7 @@ Partial Class Form3
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,6 +169,15 @@ Partial Class Form3
         Me.RichTextBox3.TabIndex = 18
         Me.RichTextBox3.Text = ""
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(430, 9)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 19
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -175,6 +185,7 @@ Partial Class Form3
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.inverno
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(804, 552)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.RichTextBox3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -214,4 +225,5 @@ Partial Class Form3
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents RichTextBox3 As System.Windows.Forms.RichTextBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

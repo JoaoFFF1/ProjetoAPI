@@ -1,0 +1,90 @@
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 23/11/2018 11:55:55///
+dataAnt:               22/11/2018 11:55:54///
+Caixas limpas///
+Exceção detetada///
+Texto definido
+<=====================>
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 22/11/2018 11:55:55///
+dataAnt:               23/11/2018 11:55:55///
+index: 0///
+data adicionada:       23/11/2018 11:55:55///
+nota1 adicionada: 1///
+nota2 adicionada: 1///
+Caixas limpas///
+Exceção detetada///
+Texto definido
+<=====================>
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 23/11/2018 11:55:55///
+dataAnt:               22/11/2018 11:55:55///
+Caixas limpas///
+Texto definido
+<=====================>
+===========================================================================
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 23/11/2018 11:58:28///
+dataAnt:               22/11/2018 11:58:27///
+Caixas limpas///
+Exceção detetada///
+Texto definido
+<=====================>
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 22/11/2018 11:58:28///
+dataAnt:               23/11/2018 11:58:28///
+Caixas limpas///
+Exceção detetada///
+Texto definido
+<=====================>
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 23/11/2018 11:58:28///
+dataAnt:               22/11/2018 11:58:28///
+index: 0///
+data adicionada:       22/11/2018 11:58:28 ///
+nota1 adicionada: 1///
+nota2 adicionada: 1///
+Caixas limpas///
+Exceção detetada///
+Texto definido
+<=====================>
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 22/11/2018 11:58:28///
+dataAnt:               23/11/2018 11:58:28///
+Caixas limpas///
+Exceção detetada///
+Texto definido
+<=====================>
+
+
+
+
+
+««==Data mudada para a do dia auto==»»
+<=====================>
+Evento detetado, 
+DateTimePicker1.Value: 22/11/2018 12:04:33///
+dataAnt:               22/11/2018 12:04:33///
+Caixas limpas///
+Exceção detetada///
+Texto definido
+<=====================>
+
+
+««==Data mudada para a do dia manual==»»
+<=====================>
+Evento detetado, DateTimePicker1.Value: 22/11/2018 12:30:23///dataAnt: 22/11/2018 12:30:23///Caixas limpas///Exceção detetada///Texto definido
+<=====================><=====================>
+Evento detetado, DateTimePicker1.Value: 23/11/2018 12:30:23///dataAnt: 22/11/2018 12:30:23///index: 0
+ ///data adicionada: 22/11/2018 12:30:23 ///nota1 adicionada: 1
+ ///nota2 adicionada: 1///Caixas limpas///Exceção detetada///Texto definido
+<=====================><=====================>
+Evento detetado, DateTimePicker1.Value: 22/11/2018 12:30:23///dataAnt: 23/11/2018 12:30:23///Caixas limpas///Nota adicionada: 1///Nota adicionada: 1///Texto definido
+<=====================> 
