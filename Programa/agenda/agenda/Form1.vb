@@ -71,26 +71,6 @@
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Label2.Text = Date.Now.Year
     End Sub
-
-    '    Public Function validar(array As String(), value As String) As Boolean
-    '        For Each item As String In array
-    '            If item = value Then
-    '                passa = True
-    '                Exit For
-    '            Else
-    '                passa = False
-    '            End If
-    '            Return passa
-    '        Next
-    '    End Function
-
-    '    Public Function login(nome As String, pass As String) As Boolean
-    '        If validar(users, nome) Then
-    '            passa = True
-    '        Else
-    '            passa = False
-    '        End If
-    '    End Function
 End Class
 'my.computer.filesystem 
 '   writtealltext(dir, ficheiro, boool)

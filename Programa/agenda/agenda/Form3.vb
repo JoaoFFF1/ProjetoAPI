@@ -1,12 +1,12 @@
 ﻿Public Class Form3
 
     Dim dados As Integer = 0
+    Dim dataAnt As Date = Date.Now()
     Dim datas(365) As Date
     Dim notas(365) As String
     Dim notas2(365) As String
 
     Private Sub Form3_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-       
 
             Dim mes As String = Date.Now.Month.ToString()
 
@@ -22,10 +22,6 @@
 
         End Select
 
-    End Sub
-
-    Sub sla()
-       
     End Sub
 
     Private Sub PictureBox2_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox2.Click
@@ -104,24 +100,33 @@
         'Dim notas(365) As String
         'Dim notas2(365) As String
 
-        If Not (RichTextBox1.TextLength = 0 Or RichTextBox2.TextLength = 0) Then
-            RichTextBox3.AppendText("<=====================>" & vbNewLine & "Evento detetado, DateTimePicker1.Value: " & DateTimePicker1.Value)
+        RichTextBox3.AppendText("<=====================>" & vbNewLine & "Evento detetado, DateTimePicker1.Value: " & DateTimePicker1.Value & "///dataAnt: " & dataAnt)
 
-            datas(dados) = DateTimePicker1.Value
+        If Not (RichTextBox1.TextLength = 0 And RichTextBox2.TextLength = 0) Then
+
+            datas(dados) = dataAnt
             notas(dados) = RichTextBox1.Text
             notas2(dados) = RichTextBox2.Text
 
-            RichTextBox3.AppendText("index: " & dados & vbNewLine & " data adicionada: " & datas(dados) & " nota1 adicionada: " & notas(dados) & vbNewLine & " nota2 adicionada: " & notas2(dados))
+            RichTextBox3.AppendText("///index: " & dados & vbNewLine & " ///data adicionada: " & datas(dados) & " ///nota1 adicionada: " & notas(dados) & vbNewLine & " ///nota2 adicionada: " & notas2(dados))
+        End If
 
             RichTextBox1.Clear()
             RichTextBox2.Clear()
 
-            RichTextBox3.AppendText("Caixas limpas")
+        RichTextBox3.AppendText("///Caixas limpas")
 
+        Try
             RichTextBox1.Text = notas(Array.IndexOf(datas, DateTimePicker1.Value))
             RichTextBox2.Text = notas2(Array.IndexOf(datas, DateTimePicker1.Value))
+        Catch ex As IndexOutOfRangeException
+            RichTextBox3.AppendText("///Exceção detetada")
+            RichTextBox1.Text = ""
+            RichTextBox2.Text = ""
+        End Try
 
-            RichTextBox3.AppendText("Texto definido" & vbNewLine & "<=====================>")
-        End If
+        RichTextBox3.AppendText("///Texto definido" & vbNewLine & "<=====================>")
+
+            dataAnt = DateTimePicker1.Value
     End Sub
 End Class
