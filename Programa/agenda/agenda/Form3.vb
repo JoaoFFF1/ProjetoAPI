@@ -1,8 +1,19 @@
 ﻿Public Class Form3
 
     Public frases(11) As String
+    Dim t As Double
+
 
     Private Sub Form3_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+        Try
+            RichTextBox1.Text = Form1.online.diarios(DateTimePicker1.Value.ToShortDateString).todo
+            RichTextBox2.Text = Form1.online.diarios(DateTimePicker1.Value.ToShortDateString).todo2
+        Catch ex As Exception
+            RichTextBox1.Text = ""
+            RichTextBox2.Text = ""
+        End Try
+
         frases(0) = "Knownledge is power, but enthusiasm pulls the switch."
         frases(1) = "Be yourself because an original is worth more than a copy."
         frases(2) = "Every sixty seconds you spend upset is a minute of happiness you'll never get back."

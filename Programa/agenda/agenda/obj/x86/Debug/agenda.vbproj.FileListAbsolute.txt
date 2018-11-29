@@ -46,6 +46,33 @@ C:\Users\joaof\Desktop\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\Wind
 C:\Users\joaof\Desktop\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form7.resources
 C:\Users\joaof\Desktop\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Resources.resources
 C:\Users\joaof\Desktop\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.vbproj.GenerateResource.Cache
-C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\agenda.exe
-C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\agenda.xml
-C:\Users\joaof\Desktop\ProjetoApi\Programa\agenda\agenda\obj\x86\Debug\agenda.pdb
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.exe
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.xml
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.pdb
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\bin\Debug\agenda.exe
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\bin\Debug\agenda.pdb
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\bin\Debug\agenda.xml
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form2.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form3.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form4.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form5.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form6.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form7.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Utilizador\Desktop\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.vbproj.GenerateResource.Cache
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.exe
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.xml
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.pdb
+E:\final api\Trabalho API-Helena part\agenda\agenda\bin\Debug\agenda.exe
+E:\final api\Trabalho API-Helena part\agenda\agenda\bin\Debug\agenda.pdb
+E:\final api\Trabalho API-Helena part\agenda\agenda\bin\Debug\agenda.xml
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form1.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form2.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form3.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form4.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form5.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form6.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Form7.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\WindowsApplication1.Resources.resources
+E:\final api\Trabalho API-Helena part\agenda\agenda\obj\x86\Debug\agenda.vbproj.GenerateResource.Cache

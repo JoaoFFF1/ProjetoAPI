@@ -22,6 +22,7 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -35,6 +36,9 @@ Partial Class Form3
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,6 +92,7 @@ Partial Class Form3
         '
         'PictureBox1
         '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.ErrorImage = Global.WindowsApplication1.My.Resources.Resources.calendario1
         Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.calendario11
         Me.PictureBox1.Location = New System.Drawing.Point(-37, 167)
@@ -99,6 +104,7 @@ Partial Class Form3
         '
         'PictureBox3
         '
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.ErrorImage = Global.WindowsApplication1.My.Resources.Resources.calendario1
         Me.PictureBox3.Image = Global.WindowsApplication1.My.Resources.Resources.bloco_notas
         Me.PictureBox3.Location = New System.Drawing.Point(-37, 226)
@@ -110,6 +116,7 @@ Partial Class Form3
         '
         'PictureBox4
         '
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.ErrorImage = Global.WindowsApplication1.My.Resources.Resources.calendario1
         Me.PictureBox4.Image = Global.WindowsApplication1.My.Resources.Resources.grafico
         Me.PictureBox4.Location = New System.Drawing.Point(-37, 309)
@@ -121,6 +128,7 @@ Partial Class Form3
         '
         'PictureBox5
         '
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox5.ErrorImage = Global.WindowsApplication1.My.Resources.Resources.calendario1
         Me.PictureBox5.Image = Global.WindowsApplication1.My.Resources.Resources.sair
         Me.PictureBox5.Location = New System.Drawing.Point(-37, 359)
@@ -180,6 +188,32 @@ Partial Class Form3
         Me.Button1.Text = "Save"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.Font = New System.Drawing.Font("Rockwell Condensed", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(338, 499)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(58, 18)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "To do List"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.Font = New System.Drawing.Font("Rockwell Condensed", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(693, 499)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(50, 18)
+        Me.Label4.TabIndex = 21
+        Me.Label4.Text = "Planning"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -187,6 +221,8 @@ Partial Class Form3
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.inverno
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(804, 552)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.PictureBox7)
@@ -212,6 +248,7 @@ Partial Class Form3
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -227,4 +264,7 @@ Partial Class Form3
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

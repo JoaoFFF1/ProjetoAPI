@@ -165,13 +165,17 @@ Public Class Form5
     End Sub
 
     Private Sub Label7_Click(sender As System.Object, e As System.EventArgs) Handles Label7.Click
-            Try
-                Dim n1 As Double = RichTextBox1.Text.Trim
-                Dim n2 As Double = RichTextBox2.Text.Trim
-            Label7.Text = (n1 + n2) / 2
-            Catch ex As Exception
+        Try
+            Dim n1 As Double = RichTextBox1.Text.Trim
+            Dim n2 As Double = RichTextBox2.Text.Trim
+            If n1 < 0 Or n2 < 0 Then
+                MessageBox.Show("deu erro volta a trás e para de gozar com o nosso trabalho")
+            Else
+                Label7.Text = (n1 + n2) / 2
+            End If
+        Catch ex As Exception
             MessageBox.Show("deu erro volta a trás e para de gozar com o nosso trabalho")
-            End Try
+        End Try
     End Sub
 
     Private Sub Label8_Click(sender As System.Object, e As System.EventArgs) Handles Label8.Click
@@ -180,11 +184,15 @@ Public Class Form5
             'faz tudo
             Dim n3 As Double = RichTextBox3.Text.Trim
             Dim n4 As Double = RichTextBox4.Text.Trim
-            average = (n3 + n4) / 2
+            If n3 < 0 Or n4 < 0 Then
+                MessageBox.Show("deu erro volta a trás e para de gozar com o nosso trabalho")
+            Else
+                average = (n3 + n4) / 2
+            End If
         Else
             MessageBox.Show("deu erro volta a trás e para de gozar com o nosso trabalho")
         End If
-        Label8.Text = average 'Print(averege)
+            Label8.Text = average 'Print(averege)
     End Sub
 
     Private Sub Label9_Click(sender As System.Object, e As System.EventArgs) Handles Label9.Click
@@ -193,7 +201,11 @@ Public Class Form5
             'faz tudo
             Dim n5 As Double = RichTextBox5.Text.Trim
             Dim n11 As Double = RichTextBox11.Text.Trim
-            average = (n5 + n11) / 2
+            If n5 < 0 Or n11 < 0 Then
+                MessageBox.Show("deu erro volta a trás e para de gozar com o nosso trabalho")
+            Else
+                average = (n5 + n11) / 2
+            End If
         Else
             MessageBox.Show("deu erro volta a trás e para de gozar com o nosso trabalho")
         End If
@@ -599,10 +611,797 @@ Public Class Form5
                 RichTextBox3.Focus()
             Case Keys.Right
                 RichTextBox1.Focus()
+            Case Keys.Left
+                RichTextBox6.Focus()
+        End Select
+
+    End Sub
+
+    Private Sub RichTextBox1_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox1.KeyDown
+        Select Case e.KeyCode
+            'Case Keys.Up
+            '    RichTextBox1.Focus()
+            Case Keys.Down
+                RichTextBox4.Focus()
+            Case Keys.Right
+                RichTextBox32.Focus()
+            Case Keys.Left
+                RichTextBox2.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox6_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox6.KeyDown
+        Select Case e.KeyCode
+            'Case Keys.Up
+            '    RichTextBox1.Focus()
+            Case Keys.Down
+                RichTextBox12.Focus()
+            Case Keys.Right
+                RichTextBox2.Focus()
                 'Case Keys.Left
                 '    RichTextBox1.Focus()
         End Select
+    End Sub
 
+    Private Sub RichTextBox32_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox32.KeyDown
+        Select Case e.KeyCode
+            'Case Keys.Up
+            '    RichTextBox1.Focus()
+            Case Keys.Down
+                RichTextBox30.Focus()
+            Case Keys.Right
+                RichTextBox33.Focus()
+            Case Keys.Left
+                RichTextBox1.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox33_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox33.KeyDown
+        Select Case e.KeyCode
+            'Case Keys.Up
+            '    RichTextBox1.Focus()
+            Case Keys.Down
+                RichTextBox31.Focus()
+            Case Keys.Right
+                RichTextBox55.Focus()
+            Case Keys.Left
+                RichTextBox32.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox55_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox55.KeyDown
+        Select Case e.KeyCode
+            'Case Keys.Up
+            '    RichTextBox1.Focus()
+            Case Keys.Down
+                RichTextBox53.Focus()
+            Case Keys.Right
+                RichTextBox56.Focus()
+            Case Keys.Left
+                RichTextBox33.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox56_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox56.KeyDown
+        Select Case e.KeyCode
+            'Case Keys.Up
+            '    RichTextBox1.Focus()
+            Case Keys.Down
+                RichTextBox54.Focus()
+                'Case Keys.Right
+                '   RichTextBox1.Focus()
+            Case Keys.Left
+                RichTextBox55.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox12_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox12.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox6.Focus()
+            Case Keys.Down
+                RichTextBox7.Focus()
+            Case Keys.Right
+                RichTextBox3.Focus()
+                'Case Keys.Left
+                '    RichTextBox1.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox3_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox3.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox2.Focus()
+            Case Keys.Down
+                RichTextBox5.Focus()
+            Case Keys.Right
+                RichTextBox4.Focus()
+            Case Keys.Left
+                RichTextBox12.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox4_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox4.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox1.Focus()
+            Case Keys.Down
+                RichTextBox11.Focus()
+            Case Keys.Right
+                RichTextBox30.Focus()
+            Case Keys.Left
+                RichTextBox3.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox30_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox30.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox32.Focus()
+            Case Keys.Down
+                RichTextBox27.Focus()
+            Case Keys.Right
+                RichTextBox31.Focus()
+            Case Keys.Left
+                RichTextBox4.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox31_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs)
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox33.Focus()
+            Case Keys.Down
+                RichTextBox28.Focus()
+            Case Keys.Right
+                RichTextBox53.Focus()
+            Case Keys.Left
+                RichTextBox30.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox53_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox53.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox55.Focus()
+            Case Keys.Down
+                RichTextBox51.Focus()
+            Case Keys.Right
+                RichTextBox54.Focus()
+            Case Keys.Left
+                RichTextBox31.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox54_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox54.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox56.Focus()
+            Case Keys.Down
+                RichTextBox52.Focus()
+                'Case Keys.Right
+                'RichTextBox1.Focus()
+            Case Keys.Left
+                RichTextBox53.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox7_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox7.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox12.Focus()
+            Case Keys.Down
+                RichTextBox25.Focus()
+            Case Keys.Right
+                RichTextBox5.Focus()
+                'Case Keys.Left
+                '    RichTextBox1.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox5_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox5.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox3.Focus()
+            Case Keys.Down
+                RichTextBox16.Focus()
+            Case Keys.Right
+                RichTextBox11.Focus()
+            Case Keys.Left
+                RichTextBox7.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox11_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox11.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox4.Focus()
+            Case Keys.Down
+                RichTextBox20.Focus()
+            Case Keys.Right
+                RichTextBox27.Focus()
+            Case Keys.Left
+                RichTextBox5.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox27_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox27.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox30.Focus()
+            Case Keys.Down
+                RichTextBox19.Focus()
+            Case Keys.Right
+                RichTextBox28.Focus()
+            Case Keys.Left
+                RichTextBox11.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox28_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox28.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox31.Focus()
+            Case Keys.Down
+                RichTextBox26.Focus()
+            Case Keys.Right
+                RichTextBox51.Focus()
+            Case Keys.Left
+                RichTextBox27.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox51_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox51.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox53.Focus()
+            Case Keys.Down
+                RichTextBox49.Focus()
+            Case Keys.Right
+                RichTextBox52.Focus()
+            Case Keys.Left
+                RichTextBox28.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox52_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox52.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox54.Focus()
+            Case Keys.Down
+                RichTextBox50.Focus()
+                'Case Keys.Right
+                'RichTextBox1.Focus()
+            Case Keys.Left
+                RichTextBox51.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox25_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox25.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox7.Focus()
+            Case Keys.Down
+                RichTextBox23.Focus()
+            Case Keys.Right
+                RichTextBox16.Focus()
+                'Case Keys.Left
+                '    RichTextBox1.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox16_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox16.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox5.Focus()
+            Case Keys.Down
+                RichTextBox35.Focus()
+            Case Keys.Right
+                RichTextBox20.Focus()
+            Case Keys.Left
+                RichTextBox25.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox20_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox20.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox11.Focus()
+            Case Keys.Down
+                RichTextBox36.Focus()
+            Case Keys.Right
+                RichTextBox19.Focus()
+            Case Keys.Left
+                RichTextBox16.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox19_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox19.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox27.Focus()
+            Case Keys.Down
+                RichTextBox17.Focus()
+            Case Keys.Right
+                RichTextBox26.Focus()
+            Case Keys.Left
+                RichTextBox20.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox26_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox26.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox28.Focus()
+            Case Keys.Down
+                RichTextBox18.Focus()
+            Case Keys.Right
+                RichTextBox49.Focus()
+            Case Keys.Left
+                RichTextBox19.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox49_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox49.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox51.Focus()
+            Case Keys.Down
+                RichTextBox47.Focus()
+            Case Keys.Right
+                RichTextBox50.Focus()
+            Case Keys.Left
+                RichTextBox26.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox50_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox50.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox52.Focus()
+            Case Keys.Down
+                RichTextBox48.Focus()
+                'Case Keys.Right
+                'RichTextBox49.Focus()
+            Case Keys.Left
+                RichTextBox49.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox23_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox23.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox25.Focus()
+            Case Keys.Down
+                RichTextBox21.Focus()
+            Case Keys.Right
+                RichTextBox35.Focus()
+                'Case Keys.Left
+                '    RichTextBox1.Focus()
+        End Select
+    End Sub
+
+
+
+    Private Sub RichTextBox35_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox35.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox16.Focus()
+            Case Keys.Down
+                RichTextBox29.Focus()
+            Case Keys.Right
+                RichTextBox36.Focus()
+            Case Keys.Left
+                RichTextBox23.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox34_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox34.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox36.Focus()
+            Case Keys.Down
+                RichTextBox24.Focus()
+            Case Keys.Right
+                RichTextBox14.Focus()
+            Case Keys.Left
+                RichTextBox29.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox36_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox36.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox20.Focus()
+            Case Keys.Down
+                RichTextBox34.Focus()
+            Case Keys.Right
+                RichTextBox17.Focus()
+            Case Keys.Left
+                RichTextBox35.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox17_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox17.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox19.Focus()
+            Case Keys.Down
+                RichTextBox14.Focus()
+            Case Keys.Right
+                RichTextBox18.Focus()
+            Case Keys.Left
+                RichTextBox36.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox18_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox18.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox26.Focus()
+            Case Keys.Down
+                RichTextBox15.Focus()
+            Case Keys.Right
+                RichTextBox47.Focus()
+            Case Keys.Left
+                RichTextBox17.Focus()
+        End Select
+    End Sub
+
+
+    Private Sub RichTextBox47_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox47.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox49.Focus()
+            Case Keys.Down
+                RichTextBox45.Focus()
+            Case Keys.Right
+                RichTextBox48.Focus()
+            Case Keys.Left
+                RichTextBox18.Focus()
+        End Select
+    End Sub
+
+
+    Private Sub RichTextBox48_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox48.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox50.Focus()
+            Case Keys.Down
+                RichTextBox46.Focus()
+                'Case Keys.Right
+                'RichTextBox18.Focus()
+            Case Keys.Left
+                RichTextBox47.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox21_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox21.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox23.Focus()
+            Case Keys.Down
+                RichTextBox43.Focus()
+            Case Keys.Right
+                RichTextBox29.Focus()
+                'Case Keys.Left
+                'RichTextBox36.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox29_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox29.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox35.Focus()
+            Case Keys.Down
+                RichTextBox22.Focus()
+            Case Keys.Right
+                RichTextBox34.Focus()
+            Case Keys.Left
+                RichTextBox21.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox14_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox14.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox17.Focus()
+            Case Keys.Down
+                RichTextBox10.Focus()
+            Case Keys.Right
+                RichTextBox15.Focus()
+            Case Keys.Left
+                RichTextBox34.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox15_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox15.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox18.Focus()
+            Case Keys.Down
+                RichTextBox13.Focus()
+            Case Keys.Right
+                RichTextBox45.Focus()
+            Case Keys.Left
+                RichTextBox14.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox45_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox45.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox47.Focus()
+            Case Keys.Down
+                RichTextBox41.Focus()
+            Case Keys.Right
+                RichTextBox46.Focus()
+            Case Keys.Left
+                RichTextBox15.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox46_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox46.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox48.Focus()
+            Case Keys.Down
+                RichTextBox44.Focus()
+                'Case Keys.Right
+                'RichTextBox18.Focus()
+            Case Keys.Left
+                RichTextBox45.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox43_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox43.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox21.Focus()
+            Case Keys.Down
+                RichTextBox42.Focus()
+            Case Keys.Right
+                RichTextBox22.Focus()
+                'Case Keys.Left
+                'RichTextBox36.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox22_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox22.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox29.Focus()
+            Case Keys.Down
+                RichTextBox37.Focus()
+            Case Keys.Right
+                RichTextBox24.Focus()
+            Case Keys.Left
+                RichTextBox43.Focus()
+        End Select
+    End Sub
+
+
+    Private Sub RichTextBox24_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox24.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox34.Focus()
+            Case Keys.Down
+                RichTextBox38.Focus()
+            Case Keys.Right
+                RichTextBox10.Focus()
+            Case Keys.Left
+                RichTextBox22.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox10_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox10.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox14.Focus()
+            Case Keys.Down
+                RichTextBox8.Focus()
+            Case Keys.Right
+                RichTextBox13.Focus()
+            Case Keys.Left
+                RichTextBox24.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox13_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox13.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox15.Focus()
+            Case Keys.Down
+                RichTextBox9.Focus()
+            Case Keys.Right
+                RichTextBox41.Focus()
+            Case Keys.Left
+                RichTextBox10.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox41_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox41.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox45.Focus()
+            Case Keys.Down
+                RichTextBox39.Focus()
+            Case Keys.Right
+                RichTextBox44.Focus()
+            Case Keys.Left
+                RichTextBox13.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox44_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox44.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox46.Focus()
+            Case Keys.Down
+                RichTextBox40.Focus()
+                'Case Keys.Right
+                'RichTextBox18.Focus()
+            Case Keys.Left
+                RichTextBox41.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox42_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox42.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox43.Focus()
+                'Case Keys.Down
+                'RichTextBox14.Focus()
+            Case Keys.Right
+                RichTextBox37.Focus()
+                'Case Keys.Left
+                'RichTextBox36.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox37_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox37.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox22.Focus()
+                'Case Keys.Down
+                'RichTextBox14.Focus()
+            Case Keys.Right
+                RichTextBox38.Focus()
+            Case Keys.Left
+                RichTextBox42.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox38_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox38.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox24.Focus()
+                'Case Keys.Down
+                'RichTextBox12.Focus()
+            Case Keys.Right
+                RichTextBox8.Focus()
+            Case Keys.Left
+                RichTextBox37.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox8_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox8.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox10.Focus()
+                'Case Keys.Down
+                'RichTextBox14.Focus()
+            Case Keys.Right
+                RichTextBox9.Focus()
+            Case Keys.Left
+                RichTextBox38.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox9_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox9.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox13.Focus()
+            Case Keys.Right
+                RichTextBox39.Focus()
+            Case Keys.Left
+                RichTextBox8.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox39_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox39.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox41.Focus()
+                'Case Keys.Down
+                'RichTextBox14.Focus()
+            Case Keys.Right
+                RichTextBox40.Focus()
+            Case Keys.Left
+                RichTextBox9.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox40_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox40.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox44.Focus()
+                'Case Keys.Down
+                'RichTextBox14.Focus()
+                'Case Keys.Right
+                'RichTextBox18.Focus()
+            Case Keys.Left
+                RichTextBox39.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox31_KeyDown_1(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles RichTextBox31.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Up
+                RichTextBox33.Focus()
+            Case Keys.Down
+                RichTextBox28.Focus()
+            Case Keys.Right
+                RichTextBox53.Focus()
+            Case Keys.Left
+                RichTextBox30.Focus()
+        End Select
+    End Sub
+
+    Private Sub RichTextBox6_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox6.Leave
+        If RichTextBox6.TextLength < 0 Or (RichTextBox6.Text = RichTextBox12.Text And RichTextBox12.TextLength > 0) Or (RichTextBox6.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox6.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox6.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox6.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox6.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox6.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox6.Clear()
+        End If
+    End Sub
+
+    Private Sub RichTextBox12_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox12.Leave
+        If RichTextBox12.TextLength < 0 Or (RichTextBox12.Text = RichTextBox6.Text And RichTextBox12.TextLength > 0) Or (RichTextBox12.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox12.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox12.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox12.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox12.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox12.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox12.Clear()
+        End If
+    End Sub
+
+    Private Sub RichTextBox7_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox7.Leave
+        If RichTextBox7.TextLength < 0 Or (RichTextBox7.Text = RichTextBox6.Text And RichTextBox12.TextLength > 0) Or (RichTextBox7.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox7.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox7.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox7.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox7.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox7.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox7.Clear()
+        End If
+    End Sub
+
+    Private Sub RichTextBox25_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox25.Leave
+        If RichTextBox25.TextLength < 0 Or (RichTextBox25.Text = RichTextBox6.Text And RichTextBox12.TextLength > 0) Or (RichTextBox25.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox25.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox25.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox25.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox25.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox25.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox25.Clear()
+        End If
+    End Sub
+
+    Private Sub RichTextBox23_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox23.Leave
+        If RichTextBox23.TextLength < 0 Or (RichTextBox23.Text = RichTextBox6.Text And RichTextBox12.TextLength > 0) Or (RichTextBox23.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox23.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox23.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox23.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox23.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox23.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox23.Clear()
+        End If
+    End Sub
+
+    Private Sub RichTextBox21_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox21.Leave
+        If RichTextBox21.TextLength < 0 Or (RichTextBox21.Text = RichTextBox6.Text And RichTextBox12.TextLength > 0) Or (RichTextBox21.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox21.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox21.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox21.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox21.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox21.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox21.Clear()
+        End If
+    End Sub
+
+    Private Sub RichTextBox43_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox43.Leave
+        If RichTextBox43.TextLength < 0 Or (RichTextBox43.Text = RichTextBox6.Text And RichTextBox12.TextLength > 0) Or (RichTextBox43.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox43.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox43.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox43.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox43.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox43.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox43.Clear()
+        End If
+    End Sub
+
+    Private Sub RichTextBox42_Leave(sender As System.Object, e As System.EventArgs) Handles RichTextBox42.Leave
+        If RichTextBox42.TextLength < 0 Or (RichTextBox42.Text = RichTextBox6.Text And RichTextBox12.TextLength > 0) Or (RichTextBox42.Text = RichTextBox7.Text And RichTextBox7.TextLength > 0) Or (RichTextBox42.Text = RichTextBox25.Text And RichTextBox25.TextLength > 0) Or (RichTextBox42.Text = RichTextBox23.Text And RichTextBox23.TextLength > 0) Or (RichTextBox42.Text = RichTextBox21.Text And RichTextBox21.TextLength > 0) Or (RichTextBox42.Text = RichTextBox43.Text And RichTextBox43.TextLength > 0) Or (RichTextBox42.Text = RichTextBox42.Text And RichTextBox42.TextLength > 0) Then
+            MessageBox.Show("Duas disciplinas iguais? A sério?")
+            RichTextBox42.Clear()
+        End If
     End Sub
 End Class
 ' ^(); \/(); <(); >()

@@ -38,7 +38,7 @@
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         If Button2.Text = "Registo" Then
             If TextBox1.TextLength = 0 Or TextBox2.TextLength = 0 Or TextBox3.TextLength = 0 Then
-                MessageBox.Show("Erro: preencha todos os campos.")
+                MessageBox.Show("Erro: Please complete all fields.")
                 TextBox2.Clear()
                 TextBox3.Clear()
             Else
@@ -46,31 +46,39 @@
                     If Not users.ContainsKey(TextBox1.Text) Then
                         users.Add(TextBox1.Text, New User With {.nome = TextBox1.Text, .pass = TextBox2.Text})
                         Me.online = users(TextBox1.Text)
+                        TextBox1.Clear()
+                        TextBox2.Clear()
+                        TextBox3.Clear()
                         Me.Hide()
                         Form3.Show()
                     Else
-                        MessageBox.Show("Utilizador já registado, por favor faça o login.")
+                        MessageBox.Show("User already exist, please login.")
                     End If
 
                 Else
-                    MessageBox.Show("Erro: passes não coincídem.")
+                    MessageBox.Show("Error: passwords do not match.")
                     TextBox2.Clear()
                     TextBox3.Clear()
                 End If
             End If
         Else ' Login
             If TextBox1.TextLength = 0 Or TextBox2.TextLength = 0 Then
-                MessageBox.Show("Erro: preencha todos os campos.")
+                MessageBox.Show("Error: Please complete all fields.")
             Else
                 If users.ContainsKey(TextBox1.Text) Then
                     If users(TextBox1.Text).pass = TextBox2.Text Then
                         online = users(TextBox1.Text)
+                        TextBox1.Clear()
+                        TextBox2.Clear()
+                        TextBox3.Clear()
                         Me.Hide()
                         Form3.Show()
+                    Else
+                        MessageBox.Show("Error: Wrong password.")
                     End If
 
                 Else
-                    MessageBox.Show("Erro: utilizador não encontrado, por favor faça o registo.")
+                    MessageBox.Show("Erro: User not found, please login.")
                     TextBox2.Clear()
                     TextBox3.Clear()
                 End If
