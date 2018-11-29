@@ -25,7 +25,10 @@ Partial Class Form4
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Create = New System.Windows.Forms.Button()
+        Me.Save = New System.Windows.Forms.Button()
+        Me.See_Notes = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,9 +50,8 @@ Partial Class Form4
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(623, 293)
+        Me.TextBox1.Size = New System.Drawing.Size(714, 319)
         Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "note"
         '
         'PictureBox2
         '
@@ -61,14 +63,43 @@ Partial Class Form4
         Me.PictureBox2.TabIndex = 8
         Me.PictureBox2.TabStop = False
         '
-        'Button1
+        'Create
         '
-        Me.Button1.Location = New System.Drawing.Point(459, 27)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Create.Location = New System.Drawing.Point(681, 81)
+        Me.Create.Name = "Create"
+        Me.Create.Size = New System.Drawing.Size(75, 23)
+        Me.Create.TabIndex = 15
+        Me.Create.Text = "Create"
+        Me.Create.UseVisualStyleBackColor = True
+        '
+        'Save
+        '
+        Me.Save.Location = New System.Drawing.Point(132, 81)
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(75, 23)
+        Me.Save.TabIndex = 16
+        Me.Save.Text = "Save"
+        Me.Save.UseVisualStyleBackColor = True
+        '
+        'See_Notes
+        '
+        Me.See_Notes.Location = New System.Drawing.Point(42, 81)
+        Me.See_Notes.Name = "See_Notes"
+        Me.See_Notes.Size = New System.Drawing.Size(75, 23)
+        Me.See_Notes.TabIndex = 17
+        Me.See_Notes.Text = "See Notes"
+        Me.See_Notes.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(739, 2)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(30, 31)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "?"
         '
         'Form4
         '
@@ -77,7 +108,10 @@ Partial Class Form4
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.inverno
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(804, 552)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.See_Notes)
+        Me.Controls.Add(Me.Save)
+        Me.Controls.Add(Me.Create)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
@@ -93,5 +127,8 @@ Partial Class Form4
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Create As System.Windows.Forms.Button
+    Friend WithEvents Save As System.Windows.Forms.Button
+    Friend WithEvents See_Notes As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
