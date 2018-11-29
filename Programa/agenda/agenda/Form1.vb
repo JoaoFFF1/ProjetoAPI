@@ -39,11 +39,13 @@
         If Button2.Text = "Registo" Then
             If TextBox1.TextLength = 0 Or TextBox2.TextLength = 0 Or TextBox3.TextLength = 0 Then
                 MessageBox.Show("Erro: preencha todos os campos.")
+                TextBox2.Clear()
+                TextBox3.Clear()
             Else
                 If TextBox2.Text = TextBox3.Text Then
                     If Not users.ContainsKey(TextBox1.Text) Then
                         users.Add(TextBox1.Text, New User With {.nome = TextBox1.Text, .pass = TextBox2.Text})
-
+                        Me.online = users(TextBox1.Text)
                         Me.Hide()
                         Form3.Show()
                     Else
@@ -52,6 +54,8 @@
 
                 Else
                     MessageBox.Show("Erro: passes não coincídem.")
+                    TextBox2.Clear()
+                    TextBox3.Clear()
                 End If
             End If
         Else ' Login
@@ -67,6 +71,8 @@
 
                 Else
                     MessageBox.Show("Erro: utilizador não encontrado, por favor faça o registo.")
+                    TextBox2.Clear()
+                    TextBox3.Clear()
                 End If
             End If
         End If

@@ -139,6 +139,7 @@ Partial Class Form1
         '
         Me.TextBox3.Location = New System.Drawing.Point(617, 400)
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox3.Size = New System.Drawing.Size(152, 20)
         Me.TextBox3.TabIndex = 18
         Me.TextBox3.Visible = False
@@ -147,6 +148,7 @@ Partial Class Form1
         '
         Me.TextBox2.Location = New System.Drawing.Point(617, 340)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(152, 20)
         Me.TextBox2.TabIndex = 17
         '
